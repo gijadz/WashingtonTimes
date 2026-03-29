@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Washington Times - Politics, Breaking News, US and World News</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
+
+  <!-- collego css bootstrap e file css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- icona -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+
+<header class="header">
+  <div class="vuoto"></div>
+
+  <div class="centro">
+    <a href="https://www.washingtontimes.com/">
+      <h1><strong>The Washington Times</strong></h1>
+    </a>
+    <p class="sottotitolo">America's Newspaper</p>
+  </div>
+
+  <div class="icone">
+    <a title="mailbox">
+      <img src="newsletter.png" id="mailbox">
+    </a>
+    <div id="SignIn">
+      <a href="blank"><strong>Sign in</strong></a>
+    </div>
+    <script>
+      const subscribe = document.createElement('button');
+      subscribe.textContent = 'Subscribe';
+      subscribe.classList.add('subscribe');
+      const contenitore = document.querySelector('.icone');
+      // Lo inseriamo prima del Sign In per l'ordine corretto
+      const signInDiv = document.getElementById('SignIn');
+      contenitore.insertBefore(subscribe, signInDiv);
+    </script>
+  </div>
+</header>
+
+<body>
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
