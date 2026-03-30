@@ -372,12 +372,15 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   font-size: 18px;
   padding: 10px;
   color: #ffffff;
+  background-color: transparent; /* Rimuove lo sfondo del bottone */
+  border: none; /* Rimuove il bordo del bottone */
+  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%; /*ha una leggera spaziatura, proprio come nel sito originale*/
+  top: 100%;
   padding-top: 5px;
   min-width: 130px;
   background-color: #ffffff;
@@ -420,10 +423,6 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   font-family: serif;
 }
 
-#extra { /*solo spaziatura*/
-  margin-top: 45px;
-}
-
 /*stile delle mini-notizie a sinistra*/
 .mini-news {
   display: flex;
@@ -437,8 +436,8 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   height: 80px;
 }
 
-.mini-news h3 {
-  font-size: 14px;
+.mini-news h2 {
+  font-size: 14px !important;
   line-height: 1.1;
   font-weight: bold;
   color: #000000;
@@ -446,13 +445,13 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   cursor: pointer;
 }
 
-.mini-news h3:hover{
+.mini-news h2:hover{
   color: #a61022;
 }
 
 /*stile per la notizia principale centrale*/
-.news-principali h1 {
-  font-size: 35px;
+.news-principali > h2 {
+  font-size: 35px !important;
   font-family: "Times New Roman", Serif;
   color: #000000;
   font-weight: bold;
@@ -461,7 +460,7 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   cursor: pointer;
 }
 
-.news-principali h1:hover{
+.news-principali > h2:hover{
   color: #a61022;
 }
 
@@ -484,8 +483,9 @@ sub{
 #paragrafo {
   font-family: "Times New Roman", Serif;
   font-size: 19px;
-  text-align: justify;
+  text-align: left;
   color: #444444;
+  margin-bottom: 80px;
 }
 
 .mini {
@@ -508,17 +508,17 @@ sub{
   object-fit: cover; /*evito che l'immagine si deformi*/
 }
 
-.mini h3 {
-  font-size: 16px;
+.mini h2 {
+  font-size: 16px !important;
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
-  text-align: justify;
+  text-align: left;
   color: #000000;
   cursor: pointer;
 }
 
-.mini h3:hover{
+.mini h2:hover{
   color: #a61022;
 }
 
@@ -528,7 +528,7 @@ sub{
 }
 
 .popular{ /*come #extra{} è solo per spaziare*/
-  margin-top: 160px;
+  margin-top: 80px;
 }
 
 .popular-divisore {
@@ -548,7 +548,7 @@ sub{
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(175, 184, 196, 0.2);
 }
 
-.popular h3{
+.popular h2{
   font-size: 18px;
   line-height: 1.1;
   text-weight: bold;
@@ -637,7 +637,7 @@ sub{
   opacity: initial;
 }
 
-.foto-laterale h3 {
+.foto-laterale h2 {
   color: #000000;
   font-family: "Times New Roman", Serif;
   font-size: 20px;
@@ -652,7 +652,7 @@ sub{
   position: relative;
 }
 
-.foto-laterale h3:hover{
+.foto-laterale h2:hover{
   color: #a61022;
 }
 
@@ -747,7 +747,7 @@ sub{
   min-width: 150px;
 }
 
-.footer-column h3 {
+.footer-column h2 {
   color: #a61022;
   font-family: "Arial Black", sans-serif; /*cambio font per far risultare le parole più "appariscenti"*/
   font-size: 18px;
@@ -756,7 +756,7 @@ sub{
   cursor: pointer;
 }
 
-.footer-column h3:hover{
+.footer-column h2:hover{
   text-decoration: underline;
 }
 
@@ -816,6 +816,25 @@ sub{
   font-size: 13px;
   color: #333;
   margin: 5px 0;
+}
+
+
+/* ==========================================================================
+                              ACCESSIBILITA' (FOCUS)
+   ========================================================================== */
+
+/* Aggiunge un contorno visibile quando si naviga con la tastiera */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #a61022;
+  outline-offset: 2px;
+}
+
+/* Rimuove l'outline default per chi clicca col mouse, ma lo mantiene per la tastiera */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* ==========================================================================
@@ -927,11 +946,11 @@ sub{
     padding: 30px;
   }
 
-  .news-principali h1 {
+  .news-principali > h2 {
     font-size: 26px !important;
     line-height: 1.15; /*interlinea più stretta*/
     margin: 20px 0;    /*spazio sopra e sotto il titolo*/
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 5px;
     margin-top: 80px !important; /*esagero lo spazio per evitare che risultino come una sola notizia invece di due*/
   }
@@ -945,7 +964,7 @@ sub{
   #paragrafo {
     font-size: 18px;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left;
     color: #333;
   }
 
@@ -992,7 +1011,7 @@ sub{
     text-align: left; /*allinea a sinistra per risultare più ordinato*/
   }
 
-  .testo-notizia h3 {
+  .testo-notizia h2 {
     font-size: 14px !important;
     line-height: 1.2;
     margin: 0;
@@ -1016,7 +1035,7 @@ sub{
     justify-content: center;
     gap: 10px;
   }
-}
+
 
   .footer-column {
     width: 100%;
@@ -1026,3 +1045,4 @@ sub{
   .footer-links-row a {
     font-size: 16px; /*leggermente più piccoli per il telefono*/
   }
+}

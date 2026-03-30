@@ -11,7 +11,7 @@
 ==========================================================================-->
 
 
-<html class="no-js" lang="">
+<html lang="la">
 
 <head>
   <meta charset="utf-8">
@@ -27,21 +27,23 @@
 
 </head>
 
+<body>
+
 <header class="header">
   <div class="vuoto"></div> <!--serve solo a creare dello spazio-->
 
   <div class="centro">
     <!--titolo cliccabile e sottotitolo-->
-    <a href="#" title="Neque Porro Quisquam">
+    <a href="#" aria-label="Homepage">
       <h1><strong>Neque Porro Quisquam</strong></h1>
     </a>
-    <p class="sottotitolo">Vivamus Dignissim</p>
+    <h2 class="sottotitolo">Vivamus Dignissim</h2>
   </div>
 
   <!--icone in alto a destra-->
   <div class="icone">
-    <a title="mailbox">
-      <img src="https://placehold.co/5x5/grey/ffffff" id="mailbox">
+    <a title="mailbox" aria-label="Mailbox">
+      <img src="https://placehold.co/5x5/grey/ffffff" id="mailbox" alt="Mailbox">
     </a>
 
     <!--creazione bottone Aenan-->
@@ -51,7 +53,7 @@
       aenean.classList.add('aenean');
       const contenitore = document.querySelector('.icone');
       // Lo inseriamo prima del Sign In per l'ordine corretto
-      const magnaDiv = document.getElementById('magna');
+      const magnaDiv = document.querySelector('.magna');
       contenitore.insertBefore(aenean, magnaDiv);
     </script>
 
@@ -62,11 +64,10 @@
   </div>
 </header>
 
-<body>
-<div class="menu">
+<nav class="menu">
   <!--menu a tendina-->
   <div class="menu-tendina">
-    <span class="casella" title="Commodo">Commodo ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Commodo ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -80,7 +81,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Ultrices">Ultrices ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Ultrices ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -94,7 +95,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Phasellus">Phasellus ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Phasellus ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -108,7 +109,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Vestibulun">Vestibulun ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Vestibulun ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -122,7 +123,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Euismud">Euismud ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Euismud ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -136,7 +137,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Pellentesque">Pellentesque ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Pellentesque ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -150,7 +151,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Malesuada">Malesuada ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Malesuada ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -164,7 +165,7 @@
     </div>
   </div>
   <div class="menu-tendina">
-    <span class="casella" title="Velit">Velit ▾</span>
+    <button class="casella" aria-haspopup="true" aria-expanded="false" style="background:none; border:none;">Velit ▾</button>
 
     <div class="dropdown-content">
       <a href="#">Lorem</a>
@@ -177,43 +178,52 @@
       <a href="#">Elit</a>
     </div>
 </div>
-</div>
+</nav>
 
 <main class="griglia"> <!--griglia 3 colonne: sinistra, principale (centro), destra-->
 
   <aside class="barra-sinistra">
-    <div id="extra"> <!--crea solo spazio-->
       <!--articoli in alto a sinistra-->
     <article class="mini-news">
-      <img src="https://placehold.co/60x40?text=First+News">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Quisque rutrum urna sed purus ullamcorper pulvinar.</h3>
+      <img src="https://placehold.co/60x40?text=First+News" alt="First News Placeholder">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quisque rutrum urna sed purus ullamcorper pulvinar.</h2>
     </article>
     <article class="mini-news">
-      <img src="https://placehold.co/60x40?text=Second+News">
-      <h3>Aenean dolor ex, suscipit ac lorem et, tincidunt pellentesque ante.</h3>
+      <img src="https://placehold.co/60x40?text=Second+News" alt="Second News Placeholder">
+      <h2>Aenean dolor ex, suscipit ac lorem et, tincidunt pellentesque ante.</h2>
     </article>
     <article class="mini-news">
-      <img src="https://placehold.co/60x40?text=Third+News">
-      <h3>Curabitur eros eros, tincidunt vestibulum eleifend vitae, faucibus
-        id dolor.</h3>
+      <img src="https://placehold.co/60x40?text=Third+News" alt="Third News Placeholder">
+      <h2>Curabitur eros eros, tincidunt vestibulum eleifend vitae, faucibus
+        id dolor.</h2>
     </article>
     <article class="mini-news">
-      <img src="https://placehold.co/60x40?text=Fourth+News">
-      <h3>Suspendisse porttitor placerat arcu, sit amet lobortis quam
-        scelerisque ultrices.</h3>
+      <img src="https://placehold.co/60x40?text=Fourth+News" alt="Fourth News Placeholder">
+      <h2>Suspendisse porttitor placerat arcu, sit amet lobortis quam
+        scelerisque ultrices.</h2>
     </article>
     <article class="mini-news">
-      <img src="https://placehold.co/60x40?text=Fifth+News">
-      <h3>Donec pharetra tempus justo non posuere.
-        Aenean vulputate feugiat turpis.</h3>
+      <img src="https://placehold.co/60x40?text=Fifth+News" alt="Fifth News Placeholder">
+      <h2>Donec pharetra tempus justo non posuere.
+        Aenean vulputate feugiat turpis.</h2>
     </article>
+      <article class="mini-news">
+        <img src="https://placehold.co/60x40?text=Sixth+News" alt="Sixth News Placeholder">
+        <h2>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit.</h2>
+      </article>
+      <article class="mini-news">
+        <img src="https://placehold.co/60x40?text=Seventh+News" alt="Seventh News Placeholder">
+        <h2>Proin tincidunt, sem at egestas eleifend, ante eros
+          ultricies nibh, eu imperdiet velit dui eget ipsum.</h2>
+      </article>
     </div>
 
     <!--articolo senza foto in basso a sinistra-->
     <article class="popular"> <!--anche questa crea spazio-->
       <div class="popular-divisore"> <!--rettangolo con sfumatura personalizzato nel css-->
-        <h3><strong>EGET IMPERDIET</strong></h3>
+        <h2><strong>EGET IMPERDIET</strong></h2>
       </div>
       <p>In ligula libero, luctus nec est non, interdum eleifend lacus.
         Donec fermentum metus libero, sit amet rhoncus dui eleifend ac.</p>
@@ -226,12 +236,11 @@
     </article>
   </aside>
 
-
   <section class="news-principali"> <!--spazio centrale-->
     <!--articolo principale-->
-    <h1>Fusce tempus purus ut libero convallis suscipit.
-      Proin sed sollicitudin erat. </h1>
-    <img src="https://placehold.co/600x400?text=Main\nNews" class="foto">
+    <h2>Fusce tempus purus ut libero convallis suscipit.
+      Proin sed sollicitudin erat. </h2>
+    <img src="https://placehold.co/600x400?text=Main\nNews" class="foto" alt="Main News Placeholder">
     <p>Est <a href="#" class="autore">Vestibulum Vehicula</a>
       - <i>Neque Porro Quisquam</i> <sub> 15 facilisis auctor</sub></p>
     <p id="paragrafo">Pellentesque rhoncus, nibh id pellentesque molestie, nisi
@@ -245,40 +254,40 @@
     <!--mini articoli centrali più in basso rispetto alla principale-->
     <!--UNO-->
     <article class="mini">
-      <img src="https://placehold.co/60x40?text=Mini+News+1">
+      <img src="https://placehold.co/60x40?text=Mini+News+1" alt="Mini News 1">
       <div class="testo-notizia">
         <p>Est <a href="#" class="autore">Sed Pretium</a>
           - <i>Neque Porro Quisquam</i> <sub> 1 facilisis auctor</sub>
         </p>
 
-        <h3>Morbi luctus quam sed lectus tincidunt, eget dapibus massa porta.
-          Phasellus facilisis sapien pellentesque luctus luctus.</h3>
+        <h2>Morbi luctus quam sed lectus tincidunt, eget dapibus massa porta.
+          Phasellus facilisis sapien pellentesque luctus luctus.</h2>
       </div>
     </article>
     <!--DUE-->
     <article class="mini">
-      <img src="https://placehold.co/60x40?text=Mini+News+2">
+      <img src="https://placehold.co/60x40?text=Mini+News+2" alt="Mini News 2">
       <div class="testo-notizia">
         <p>Est <a href="#" class="autore">Pellentesque Rhoncus</a>
           - <i>Neque Porro Quisquam</i> <sub> 8 facilisis auctor</sub>
         </p>
 
-        <h3>Sed pretium urna nisl, sit amet eleifend ante placerat sit amet.
+        <h2>Sed pretium urna nisl, sit amet eleifend ante placerat sit amet.
           Curabitur rutrum laoreet volutpat. Duis ac quam in lorem iaculis
-          placerat et ut massa.</h3>
+          placerat et ut massa.</h2>
       </div>
     </article>
     <!--TRE-->
     <article class="mini">
-      <img src="https://placehold.co/60x40?text=Mini+News+3">
+      <img src="https://placehold.co/60x40?text=Mini+News+3" alt="Mini News 3">
       <div class="testo-notizia">
         <p>Est <a href="#" class="autore">Morbi Luctus</a>
           - <i>Neque Porro Quisquam</i> <sub> 11 facilisis auctor</sub>
         </p>
 
-        <h3>Maecenas sit amet lacinia risus. Aliquam congue arcu hendrerit,
+        <h2>Maecenas sit amet lacinia risus. Aliquam congue arcu hendrerit,
           finibus nulla sit amet, consectetur urna. Nullam vitae lacinia massa.
-          Mauris in quam non mi volutpat dictum non et nisl. </h3>
+          Mauris in quam non mi volutpat dictum non et nisl. </h2>
       </div>
     </article>
   </section>
@@ -287,15 +296,16 @@
     <!--icone colorate-->
     <div class="ipsum-quia">
       <span>Ipsum Quia</span>
-      <img src="https://placehold.co/6x6/red/white" class="pics" title="faucibus">
-      <img src="https://placehold.co/6x6/magenta/white" class="pics" title="porttitor">
-      <img src="https://placehold.co/6x6/teal/white" class="pics" title="tincidunt">
-      <img src="https://placehold.co/6x6/blue/white" class="pics" title="sodales">
-      <img src="https://placehold.co/6x6/orange/white" class="pics" title="adipiscing">
+      <img src="https://placehold.co/6x6/red/white" class="pics" title="faucibus" alt="Faucibus icon">
+      <img src="https://placehold.co/6x6/magenta/white" class="pics" title="porttitor" alt="Porttitor icon">
+      <img src="https://placehold.co/6x6/teal/white" class="pics" title="tincidunt" alt="Tincidunt icon">
+      <img src="https://placehold.co/6x6/blue/white" class="pics" title="sodales" alt="Sodales icon">
+      <img src="https://placehold.co/6x6/orange/white" class="pics" title="adipiscing" alt="Adipiscing icon">
     </div>
     <!--barra di ricerca-->
     <div class="barra-cerca">
-      <input type="text" placeholder="Search" class="search">
+      <label for="search-input" class="visually-hidden">Search</label>
+      <input type="text" id="search-input" placeholder="Search" class="search">
       <svg class="icona" viewBox="0 0 24 24" width="20" height="20">
         <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
       </svg>
@@ -303,19 +313,19 @@
 
     <!--articolo laterale in alto (side news)-->
     <div class="foto-laterale">
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nullam aliquet auctor libero, sed tristique diam porttitor.</h3>
-      <img src="https://placehold.co/10x10?text=Side\nNews" class="player">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nullam aliquet auctor libero, sed tristique diam porttitor.</h2>
+      <img src="https://placehold.co/10x10?text=Side\nNews" class="player" alt="Side News Placeholder">
     </div>
 
     <!--riuso la class .popular per riprendere lo spazio extra ed il rettangolo sfumato senza crearne un'altra-->
     <article class="popular">
       <div class="popular-divisore">
-        <h3><strong>PHASELLUS PHARETRA</strong></h3>
+        <h2><strong>PHASELLUS PHARETRA</strong></h2>
       </div>
       <!--articolo di "giornale" (paper of the day)-->
       <div class="paper-section">
-        <img src="https://placehold.co/130x180?text=Paper+Of+The+Day" class="paper-img">
+        <img src="https://placehold.co/130x180?text=Paper+Of+The+Day" class="paper-img" alt="Paper of the day">
         <div class="paper-testo">
           <h3><strong>Donec posuere</strong></h3>
           <p>Urabitur nec rhoncus enim, at dictum nulla.
@@ -328,67 +338,63 @@
 
 </main>
 
-<!--richiamo lo script che mi servirà per la versione telefono-->
-  <script src="js/app.js"></script>
-</body>
-
 <footer id="footer-background"> <!--rettangolo con sfondo grigio-->
   <div class="footer-container"><!--conterra tutto il testo-->
     <div class="footer-column"> <!--divide in colonne la prima metà del footer-->
 
       <!--tutte le colonne linkate-->
       <!--UNO-->
-    <h3 title="Commodo">COMMODO</h3>
+    <h2>COMMODO</h2>
     <ul>
-      <li><a href="#" title="Etiam">Etiam</a></li>
-      <li><a href="#" title="Vehicula Libero">Vehicula Libero</a></li>
-      <li><a href="#" title="Lacus & Venenatis">Lacus & Venenatis</a></li>
-      <li><a href="#" title="Suspendisse">Suspendisse</a></li>
+      <li><a href="#">Etiam</a></li>
+      <li><a href="#">Vehicula Libero</a></li>
+      <li><a href="#">Lacus & Venenatis</a></li>
+      <li><a href="#">Suspendisse</a></li>
     </ul>
   </div>
 
     <!--DUE-->
     <div class="footer-column">
-      <h3 title="Ultrices">ULTRICES</h3>
+      <h2>ULTRICES</h2>
       <ul>
-        <li><a href="#" title="Duis">Duis</a></li>
-        <li><a href="#" title="Curabitur Lorem">Curabitur Lorem</a></li>
-        <li><a href="#" title="Mauris">Mauris</a></li>
+        <li><a href="#">Duis</a></li>
+        <li><a href="#">Curabitur Lorem</a></li>
+        <li><a href="#">Mauris</a></li>
       </ul>
     </div>
 
     <!--TRE-->
     <div class="footer-column">
-      <h3 title="Phasellus">PHASELLUS</h3>
+      <h2>PHASELLUS</h2>
       <ul>
-        <li><a href="#" title="Etiam & Fermentum">Etiam & Fermentum</a></li>
-        <li><a href="#" title="Proin Ut Tortor">Proin Ut Tortor</a></li>
-        <li><a href="#" title="Curabitur">Curabitur</a></li>
-        <li><a href="#" title="Duis et Lorem">Duis et Lorem</a></li>
-        <li><a href="#" title="Morbi Mollis">Morbi Mollis</a></li>
+        <li><a href="#">Etiam & Fermentum</a></li>
+        <li><a href="#">Proin Ut Tortor</a></li>
+        <li><a href="#">Curabitur</a></li>
+        <li><a href="#">Duis et Lorem</a></li>
+        <li><a href="#">Morbi Mollis</a></li>
       </ul>
     </div>
 
     <!--QUATTRO-->
     <div class="footer-column">
-      <h3 title="Vestibulun">VESTIBULUN</h3>
+      <h2>VESTIBULUN</h2>
       <ul>
-        <li><a href="#" title="Sollicitudin">Sollicitudin</a></li>
-        <li><a href="#" title="Condimentum">Condimentum</a></li>
-        <li><a href="#" title="Pharetra & Massa">Pharetra & Massa</a></li>
+        <li><a href="#">Sollicitudin</a></li>
+        <li><a href="#">Condimentum</a></li>
+        <li><a href="#">Pharetra & Massa</a></li>
       </ul>
     </div>
 
     <!--CINQUE-->
     <div class="footer-column">
-      <h3 title="Euismud">EUISMUD</h3>
+      <h2>EUISMUD</h2>
       <ul>
-        <li><a href="#" title="Nullam Ullamcorper">Nullam Ullamcorper</a></li>
-        <li><a href="#" title="Malesuada">Malesuada</a></li>
-        <li><a href="#" title="Venenatis & Vulputate">Venenatis & Vulputate</a></li>
-        <li><a href="#" title="Interdum">Interdum</a></li>
-        <li><a href="#" title="Cras Vulputate">Cras Vulputate</a></li>
-        <li><a href="#" title="Nisl">Nisl</a></li>
+        <li><a href="#">Nullam Ullamcorper</a></li>
+        <li><a href="#">Malesuada</a></li>
+        <li><a href="#">Venenatis & Vulputate</a></li>
+        <li><a href="#">Interdum</a></li>
+        <li><a href="#">Cras Vulputate</a></li>
+        <li><a href="#">Nisl</a></li>
       </ul>
     </div>
 
@@ -396,24 +402,28 @@
 
   <div class="footer-bottom"> <!--parte finale con le parole rosse in fila ed i finti crediti/copyright-->
   <div class="footer-links-row">
-    <a href="#" title="Lorem">Lorem</a>
-    <a href="#" title="Ispum">Ipsum</a>
-    <a href="#" title="Dolor">Dolor</a>
-    <a href="#" title="Sit">Sit</a>
-    <a href="#" title="Amet">Amet</a>
-    <a href="#" title="Consectetur">Consectetur</a>
-    <a href="#" title="Adipiscing">Adipiscing</a>
-    <a href="#" title="Elit">Elit</a>
-    <a href="#" title="Nullam">Nullam</a>
-    <a href="#" title="Nunc">Nunc</a>
-    <a href="#" title="Quam">Quam</a>
-    <a href="#" title="Tincidunt">Tincidunt</a>
+    <a href="#">Lorem</a>
+    <a href="#">Ipsum</a>
+    <a href="#">Dolor</a>
+    <a href="#">Sit</a>
+    <a href="#">Amet</a>
+    <a href="#">Consectetur</a>
+    <a href="#">Adipiscing</a>
+    <a href="#">Elit</a>
+    <a href="#">Nullam</a>
+    <a href="#">Nunc</a>
+    <a href="#">Quam</a>
+    <a href="#">Tincidunt</a>
   </div>
 
   <div class="footer-info"> <!--finti crediti-->
-    <p>Morbi accumsan pharetra nibh, © 2026 eu lobortis sapien blandit non.</p>
+    <p>Morbi accumsan pharetra nibh, © 2026 eu lobortis sapien blandit.</p>
     <p>In hac habitasse platea dictumst | Vivamus enim nibh | 100-200-300</p>
   </div>
 </div>
 </footer>
+
+<!--richiamo lo script che mi servirà per la versione telefono-->
+<script src="js/app.js"></script>
+</body>
 </html>
