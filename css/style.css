@@ -313,13 +313,13 @@ h1 {
 }
 
 /*"pulsante"  magna ligula*/
-#magna a {
+.magna a {
   font-family: "Times New Roman", serif;
   color: #000000;
   cursor: pointer;
 }
 
-#magna a:hover {
+.magna a:hover {
   color: #c00;
 }
 
@@ -343,10 +343,12 @@ a {
  */
 
 .menu { /*barra divisoria*/
-  --divisore-height: 36px;
+  position: sticky;
+  top: 0;           /* Si blocca esattamente all'inizio della finestra */
+  z-index: 1000;    /* Assicura che stia sopra agli altri contenuti mentre scorri */
+
+  height: 36px;
   width: 100%;
-  height: var(--divisore-height);
-  min-height: var(--divisore-height);
   background-color: #a61022;
 
   display: flex;
@@ -438,7 +440,14 @@ ed evitare di scrivere lo stesso codice 8 volte*/
 .mini-news h3 {
   font-size: 14px;
   line-height: 1.1;
+  font-weight: bold;
+  color: #000000;
   margin: 0;
+  cursor: pointer;
+}
+
+.mini-news h3:hover{
+  color: #a61022;
 }
 
 /*stile per la notizia principale centrale*/
@@ -449,7 +458,11 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   font-weight: bold;
   margin-bottom: 15px;
   text-align: left;
+  cursor: pointer;
+}
 
+.news-principali h1:hover{
+  color: #a61022;
 }
 
 .news-principali p{
@@ -497,9 +510,16 @@ sub{
 
 .mini h3 {
   font-size: 16px;
+  font-weight: bold;
   line-height: 1.2;
   margin: 0;
   text-align: justify;
+  color: #000000;
+  cursor: pointer;
+}
+
+.mini h3:hover{
+  color: #a61022;
 }
 
 .mini p {
@@ -520,7 +540,12 @@ sub{
   height: 30px;
   width: 100%;
   color: #ffffff;
-  background-image: linear-gradient(to right,#999999, #aaaaaa, #ffffff);
+  background-image: linear-gradient(to right,
+    #afb8c4 0%,    /* Inizio grigio */
+    #afb8c4 25%,   /* Resta grigio solido fino al 25% (per coprire bene sotto il testo) */
+    #e9ecf0 60%,   /* Inizia a schiarirsi dolcemente */
+    #ffffff 95%);    /* Diventa bianco quasi alla fine */
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(175, 184, 196, 0.2);
 }
 
 .popular h3{
@@ -539,6 +564,11 @@ sub{
   margin: 0;
   height: auto;
   margin-top:16px;
+  cursor: pointer;
+}
+
+.popular p:hover{
+  color: #a61022;
 }
 
 .foto {
@@ -613,12 +643,17 @@ sub{
   font-size: 20px;
   font-weight: bold;
   margin-top: 70px;
+  cursor: pointer;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 2%;
   position: relative;
+}
+
+.foto-laterale h3:hover{
+  color: #a61022;
 }
 
 .player {
@@ -657,6 +692,11 @@ sub{
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 2px; /*distanza minima tra titolo e paragrafo*/
+  cursor: pointer;
+}
+
+.paper-testo h3:hover{
+  color: #a61022;
 }
 
 .paper-testo p {
@@ -665,6 +705,12 @@ sub{
   font-size: 15px;
   line-height: 1.2;
   font-weight: normal;
+}
+
+/*forzo p a non prendere la funzione di h3*/
+.paper-testo p:hover{
+  cursor: text;
+  color: #555555;
 }
 
 .paper-img {
@@ -679,3 +725,304 @@ sub{
                               PIE' DI PAGINA
    ==========================================================================
  */
+#footer-background {
+  background-color: #e9ecf0;
+  width: 100%;
+  padding: 30px 0 10px 0;
+  margin-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto; /*centro il container nella pagina*/
+  padding: 0 20px;
+}
+
+.footer-column {
+  flex: 1;/*forzo le colonne ad avere larghezza uguale*/
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  color: #a61022;
+  font-family: "Arial Black", sans-serif; /*cambio font per far risultare le parole più "appariscenti"*/
+  font-size: 18px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.footer-column h3:hover{
+  text-decoration: underline;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 2px;
+}
+
+.footer-column li:hover{
+  text-decoration: underline;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e9ecf0;
+  border-top: 1px solid #afb8c4; /* aggiungo linea sottile per separare*/
+  margin-top: 60px;
+}
+
+
+
+.footer-links-row { /*"link" rossi alla fine*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*serve per andare a capo sulla versione telefonica*/
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+
+.footer-links-row a {
+  color: #a61022;
+  text-decoration: none;
+  font-family: "Times New Roman", Serif;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+
+/*finte info copyright finali*/
+.footer-info p {
+  font-family: "Times New Roman", serif;
+  font-size: 13px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* ==========================================================================
+                          ADATTAMENTO A VISIONE TELEFONICA
+   ==========================================================================
+ */
+
+@media (max-width: 768px) {
+  /*il titolo rimane visibile durante tutto lo scorrimento (sticky)*/
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: #a61022;
+    padding: 10px 0;
+    flex-direction: column;
+    height: auto;
+    border-bottom: none;/*elimina eventuali bordi residui*/
+    gap: 0;
+  }
+
+  /*forzo il menu a tendina a scorrere a destra e sinistra senza che il resto della pagina lo faccia*/
+  .menu {
+    position: sticky;
+    contain: none !important;
+    height: 45px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-start !important;
+    /*overflow: visible !important;*/
+    overflow-x: auto !important; /*per lo scorrimento del menu*/
+    overflow-y: visible !important;
+    white-space: nowrap;
+    padding: 0 15px;
+    gap: 5px;
+    -webkit-overflow-scrolling: touch;
+    background-color: #a61022;
+    contain: none;
+    align-items: stretch; /*assicura che le caselle occupino l'altezza*/
+
+  }
+
+  /*nasconde una barra bianca che si creava nel menu*/
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-tendina {
+    position: relative !important; /*"attacca" la tendina alla casella visibile nel menu*/
+    display: flex;
+    align-items: center;
+  }
+
+  /*fa comparire la tendina (grazie al fil js)*/
+  .menu-tendina.active .dropdown-content {
+    display: block !important;
+  }
+
+  /*evidenzia in rosso l'opzione cliccata (sempre grazie js)*/
+  .menu-tendina.active .casella {
+    background-color: #ffffff;
+    color: #a61022 !important;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed !important;
+    width: auto !important;
+    min-width: 130px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    z-index: 999999;
+    border: 1px solid #ccc;
+    border-top: none;
+    transform: translateX(-50%);
+  }
+
+  .dropdown-content a {
+    padding: 8px 15px !important; /*assottiglio*/
+    border-bottom: 1px solid #eee;
+    font-size: 15px !important;
+    text-align: center; /*migliora l'estetica su telefono*/
+  }
+
+  .casella {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 28px !important; /*riduzione del titolo*/
+    margin: 0;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  /*nasconde le classi dalla visibilità sul telefono (per motivi di estetica)*/
+  .vuoto,.icone, .sottotitolo {
+    display: none !important;
+  }
+
+  .centro {
+    flex: 1;
+    width: 100%;
+  }
+
+  .griglia {
+    display: block; /*visualizzo una sola colonna non 3 come sullo schermo del pc*/
+    padding: 30px;
+  }
+
+  .news-principali h1 {
+    font-size: 26px !important;
+    line-height: 1.15; /*interlinea più stretta*/
+    margin: 20px 0;    /*spazio sopra e sotto il titolo*/
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 80px !important; /*esagero lo spazio per evitare che risultino come una sola notizia invece di due*/
+  }
+
+  .news-principali p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #paragrafo {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+  }
+
+  .foto {
+    margin: 10px 0;
+  }
+
+  /*voglio che le foto occupino tutta la larghezza*/
+  .mini img, .mini-news img {
+    width: 80px;
+    height: 60px;
+  }
+
+  .mini {
+    display: flex;
+    flex-direction: row; /*immagine e testo sulla stessa riga*/
+    align-items: center; /*centra il testo verticalmente rispetto alla foto*/
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;;
+  }
+
+  /*forzo la foto a non rimpicciolirsi*/
+  .mini img {
+    width: 100px !important;
+    height: 75px !important;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  /*il contenitore del testo deve occupare il resto dello spazio*/
+  .testo-notizia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; /*prende tutto lo spazio rimanente a destra della foto*/
+  }
+
+  /*sistemo i testi*/
+  .testo-notizia p {
+    font-size: 12px;
+    margin-bottom: 2px;
+    text-align: left; /*allinea a sinistra per risultare più ordinato*/
+  }
+
+  .testo-notizia h3 {
+    font-size: 14px !important;
+    line-height: 1.2;
+    margin: 0;
+    text-align: left;
+  }
+
+  /*le colonne diventano una lista verticale*/
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-column ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links-row {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+  .footer-column {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .footer-links-row a {
+    font-size: 16px; /*leggermente più piccoli per il telefono*/
+  }

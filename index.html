@@ -1,37 +1,50 @@
 <!doctype html>
+
+<!--========================================================================
+                      Progetto di Giada Schicchi
+
+                        "The Washington Times"
+
+                       iniziato il: 29/03/2026
+                       terminato il: 30/03/2026
+                          totale commit: 3
+==========================================================================-->
+
+
 <html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Washington Times - Politics, Breaking News, US and World News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- per visione telefonica -->
 
   <!-- collego css bootstrap e file css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- icona -->
+  <!-- icona personalizzata e "Titolo" della scheda -->
   <link rel="icon" type="image/png" href="https://placehold.co/2x2/red/white">
+  <title>Neque Porro Quisquam</title>
 
 </head>
 
 <header class="header">
-  <div class="vuoto"></div>
+  <div class="vuoto"></div> <!--serve solo a creare dello spazio-->
 
   <div class="centro">
-    <a href="https://www.washingtontimes.com/">
-      <h1><strong>Neque porro quisquam</strong></h1>
+    <!--titolo cliccabile e sottotitolo-->
+    <a href="#" title="Neque Porro Quisquam">
+      <h1><strong>Neque Porro Quisquam</strong></h1>
     </a>
     <p class="sottotitolo">Vivamus Dignissim</p>
   </div>
 
+  <!--icone in alto a destra-->
   <div class="icone">
     <a title="mailbox">
       <img src="https://placehold.co/5x5/grey/ffffff" id="mailbox">
     </a>
-    <div id="magna">
-      <a href="#"><strong>Magna Ligula</strong></a>
-    </div>
+
+    <!--creazione bottone Aenan-->
     <script>
       const aenean = document.createElement('button');
       aenean.textContent = 'Aenean';
@@ -41,11 +54,17 @@
       const magnaDiv = document.getElementById('magna');
       contenitore.insertBefore(aenean, magnaDiv);
     </script>
+
+    <!--link cliccabile-->
+    <div class="magna">
+      <a href="#"><strong>Magna Ligula</strong></a>
+    </div>
   </div>
 </header>
 
 <body>
 <div class="menu">
+  <!--menu a tendina-->
   <div class="menu-tendina">
     <span class="casella" title="Commodo">Commodo ▾</span>
 
@@ -160,10 +179,11 @@
 </div>
 </div>
 
-<main class="griglia">
+<main class="griglia"> <!--griglia 3 colonne: sinistra, principale (centro), destra-->
 
   <aside class="barra-sinistra">
-    <div id="extra">
+    <div id="extra"> <!--crea solo spazio-->
+      <!--articoli in alto a sinistra-->
     <article class="mini-news">
       <img src="https://placehold.co/60x40?text=First+News">
       <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -190,8 +210,11 @@
     </article>
     </div>
 
-    <article class="popular">
-      <div class="popular-divisore"><h3><strong>EGET IMPERDIET</strong></h3></div>
+    <!--articolo senza foto in basso a sinistra-->
+    <article class="popular"> <!--anche questa crea spazio-->
+      <div class="popular-divisore"> <!--rettangolo con sfumatura personalizzato nel css-->
+        <h3><strong>EGET IMPERDIET</strong></h3>
+      </div>
       <p>In ligula libero, luctus nec est non, interdum eleifend lacus.
         Donec fermentum metus libero, sit amet rhoncus dui eleifend ac.</p>
       <p>Suspendisse a sapien in ipsum rutrum ultricies.
@@ -203,7 +226,9 @@
     </article>
   </aside>
 
-  <section class="news-principali">
+
+  <section class="news-principali"> <!--spazio centrale-->
+    <!--articolo principale-->
     <h1>Fusce tempus purus ut libero convallis suscipit.
       Proin sed sollicitudin erat. </h1>
     <img src="https://placehold.co/600x400?text=Main\nNews" class="foto">
@@ -217,6 +242,8 @@
       Mauris in quam non mi volutpat dictum non et nisl.</p>
 
 
+    <!--mini articoli centrali più in basso rispetto alla principale-->
+    <!--UNO-->
     <article class="mini">
       <img src="https://placehold.co/60x40?text=Mini+News+1">
       <div class="testo-notizia">
@@ -228,7 +255,7 @@
           Phasellus facilisis sapien pellentesque luctus luctus.</h3>
       </div>
     </article>
-
+    <!--DUE-->
     <article class="mini">
       <img src="https://placehold.co/60x40?text=Mini+News+2">
       <div class="testo-notizia">
@@ -241,7 +268,7 @@
           placerat et ut massa.</h3>
       </div>
     </article>
-
+    <!--TRE-->
     <article class="mini">
       <img src="https://placehold.co/60x40?text=Mini+News+3">
       <div class="testo-notizia">
@@ -257,6 +284,7 @@
   </section>
 
   <aside class="barra-destra">
+    <!--icone colorate-->
     <div class="ipsum-quia">
       <span>Ipsum Quia</span>
       <img src="https://placehold.co/6x6/red/white" class="pics" title="faucibus">
@@ -265,7 +293,7 @@
       <img src="https://placehold.co/6x6/blue/white" class="pics" title="sodales">
       <img src="https://placehold.co/6x6/orange/white" class="pics" title="adipiscing">
     </div>
-
+    <!--barra di ricerca-->
     <div class="barra-cerca">
       <input type="text" placeholder="Search" class="search">
       <svg class="icona" viewBox="0 0 24 24" width="20" height="20">
@@ -273,20 +301,21 @@
       </svg>
     </div>
 
+    <!--articolo laterale in alto (side news)-->
     <div class="foto-laterale">
       <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Nullam aliquet auctor libero, sed tristique diam porttitor.</h3>
       <img src="https://placehold.co/10x10?text=Side\nNews" class="player">
     </div>
 
+    <!--riuso la class .popular per riprendere lo spazio extra ed il rettangolo sfumato senza crearne un'altra-->
     <article class="popular">
       <div class="popular-divisore">
         <h3><strong>PHASELLUS PHARETRA</strong></h3>
       </div>
-
+      <!--articolo di "giornale" (paper of the day)-->
       <div class="paper-section">
         <img src="https://placehold.co/130x180?text=Paper+Of+The+Day" class="paper-img">
-
         <div class="paper-testo">
           <h3><strong>Donec posuere</strong></h3>
           <p>Urabitur nec rhoncus enim, at dictum nulla.
@@ -299,6 +328,92 @@
 
 </main>
 
+<!--richiamo lo script che mi servirà per la versione telefono-->
   <script src="js/app.js"></script>
 </body>
+
+<footer id="footer-background"> <!--rettangolo con sfondo grigio-->
+  <div class="footer-container"><!--conterra tutto il testo-->
+    <div class="footer-column"> <!--divide in colonne la prima metà del footer-->
+
+      <!--tutte le colonne linkate-->
+      <!--UNO-->
+    <h3 title="Commodo">COMMODO</h3>
+    <ul>
+      <li><a href="#" title="Etiam">Etiam</a></li>
+      <li><a href="#" title="Vehicula Libero">Vehicula Libero</a></li>
+      <li><a href="#" title="Lacus & Venenatis">Lacus & Venenatis</a></li>
+      <li><a href="#" title="Suspendisse">Suspendisse</a></li>
+    </ul>
+  </div>
+
+    <!--DUE-->
+    <div class="footer-column">
+      <h3 title="Ultrices">ULTRICES</h3>
+      <ul>
+        <li><a href="#" title="Duis">Duis</a></li>
+        <li><a href="#" title="Curabitur Lorem">Curabitur Lorem</a></li>
+        <li><a href="#" title="Mauris">Mauris</a></li>
+      </ul>
+    </div>
+
+    <!--TRE-->
+    <div class="footer-column">
+      <h3 title="Phasellus">PHASELLUS</h3>
+      <ul>
+        <li><a href="#" title="Etiam & Fermentum">Etiam & Fermentum</a></li>
+        <li><a href="#" title="Proin Ut Tortor">Proin Ut Tortor</a></li>
+        <li><a href="#" title="Curabitur">Curabitur</a></li>
+        <li><a href="#" title="Duis et Lorem">Duis et Lorem</a></li>
+        <li><a href="#" title="Morbi Mollis">Morbi Mollis</a></li>
+      </ul>
+    </div>
+
+    <!--QUATTRO-->
+    <div class="footer-column">
+      <h3 title="Vestibulun">VESTIBULUN</h3>
+      <ul>
+        <li><a href="#" title="Sollicitudin">Sollicitudin</a></li>
+        <li><a href="#" title="Condimentum">Condimentum</a></li>
+        <li><a href="#" title="Pharetra & Massa">Pharetra & Massa</a></li>
+      </ul>
+    </div>
+
+    <!--CINQUE-->
+    <div class="footer-column">
+      <h3 title="Euismud">EUISMUD</h3>
+      <ul>
+        <li><a href="#" title="Nullam Ullamcorper">Nullam Ullamcorper</a></li>
+        <li><a href="#" title="Malesuada">Malesuada</a></li>
+        <li><a href="#" title="Venenatis & Vulputate">Venenatis & Vulputate</a></li>
+        <li><a href="#" title="Interdum">Interdum</a></li>
+        <li><a href="#" title="Cras Vulputate">Cras Vulputate</a></li>
+        <li><a href="#" title="Nisl">Nisl</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom"> <!--parte finale con le parole rosse in fila ed i finti crediti/copyright-->
+  <div class="footer-links-row">
+    <a href="#" title="Lorem">Lorem</a>
+    <a href="#" title="Ispum">Ipsum</a>
+    <a href="#" title="Dolor">Dolor</a>
+    <a href="#" title="Sit">Sit</a>
+    <a href="#" title="Amet">Amet</a>
+    <a href="#" title="Consectetur">Consectetur</a>
+    <a href="#" title="Adipiscing">Adipiscing</a>
+    <a href="#" title="Elit">Elit</a>
+    <a href="#" title="Nullam">Nullam</a>
+    <a href="#" title="Nunc">Nunc</a>
+    <a href="#" title="Quam">Quam</a>
+    <a href="#" title="Tincidunt">Tincidunt</a>
+  </div>
+
+  <div class="footer-info"> <!--finti crediti-->
+    <p>Morbi accumsan pharetra nibh, © 2026 eu lobortis sapien blandit non.</p>
+    <p>In hac habitasse platea dictumst | Vivamus enim nibh | 100-200-300</p>
+  </div>
+</div>
+</footer>
 </html>
