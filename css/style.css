@@ -323,7 +323,7 @@ h1 {
   color: #c00;
 }
 
-/* finto pulsante foto mailbox*/
+/*finto pulsante foto mailbox*/
 #mailbox {
   height: 35px;
   width: auto;
@@ -344,8 +344,8 @@ a {
 
 .menu { /*barra divisoria*/
   position: sticky;
-  top: 0;           /* Si blocca esattamente all'inizio della finestra */
-  z-index: 1000;    /* Assicura che stia sopra agli altri contenuti mentre scorri */
+  top: 0;           /*si blocca esattamente all'inizio della finestra*/
+  z-index: 1000;    /*rimane sopra agli altri contenuti mentre si scorre*/
 
   height: 36px;
   width: 100%;
@@ -372,8 +372,8 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   font-size: 18px;
   padding: 10px;
   color: #ffffff;
-  background-color: transparent; /* Rimuove lo sfondo del bottone */
-  border: none; /* Rimuove il bordo del bottone */
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -393,7 +393,7 @@ ed evitare di scrivere lo stesso codice 8 volte*/
   color: #000000;
   padding: 3px 5px;
   text-decoration: none;
-  display: block;    /* Uno sotto l'altro */
+  display: block;    /*uno sotto l'altro*/
   font-family: "Times New Roman", sans-serif;
   font-size: 14px;
 }
@@ -541,10 +541,10 @@ sub{
   width: 100%;
   color: #ffffff;
   background-image: linear-gradient(to right,
-    #afb8c4 0%,    /* Inizio grigio */
-    #afb8c4 25%,   /* Resta grigio solido fino al 25% (per coprire bene sotto il testo) */
-    #e9ecf0 60%,   /* Inizia a schiarirsi dolcemente */
-    #ffffff 95%);    /* Diventa bianco quasi alla fine */
+    #afb8c4 0%,    /*inizio grigio*/
+    #afb8c4 25%,   /*resta grigio fino al 25% */
+    #e9ecf0 60%,
+    #ffffff 95%);
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(175, 184, 196, 0.2);
 }
 
@@ -786,7 +786,7 @@ sub{
   text-align: center;
   padding: 40px 20px;
   background-color: #e9ecf0;
-  border-top: 1px solid #afb8c4; /* aggiungo linea sottile per separare*/
+  border-top: 1px solid #afb8c4; /*aggiungo linea sottile per separare*/
   margin-top: 60px;
 }
 
@@ -820,10 +820,10 @@ sub{
 
 
 /* ==========================================================================
-                              ACCESSIBILITA' (FOCUS)
+                              ACCESSIBILITA' (EXTRA)
    ========================================================================== */
 
-/* Aggiunge un contorno visibile quando si naviga con la tastiera */
+/*aggiunge contorno visibile quando si scorre la pagina con la tastiera */
 a:focus,
 button:focus,
 input:focus {
@@ -831,7 +831,7 @@ input:focus {
   outline-offset: 2px;
 }
 
-/* Rimuove l'outline default per chi clicca col mouse, ma lo mantiene per la tastiera */
+/*rimuove l'outline default se uso il mouse ma lo mantiene per la tastiera */
 a:focus:not(:focus-visible),
 button:focus:not(:focus-visible) {
   outline: none;
@@ -888,12 +888,12 @@ button:focus:not(:focus-visible) {
     align-items: center;
   }
 
-  /*fa comparire la tendina (grazie al fil js)*/
+  /*fa comparire la tendina*/
   .menu-tendina.active .dropdown-content {
     display: block !important;
   }
 
-  /*evidenzia in rosso l'opzione cliccata (sempre grazie js)*/
+  /*evidenzia in rosso l'opzione cliccata*/
   .menu-tendina.active .casella {
     background-color: #ffffff;
     color: #a61022 !important;
