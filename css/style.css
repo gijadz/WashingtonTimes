@@ -252,7 +252,10 @@ textarea {
    ==========================================================================
  */
 
-/*START HEADER*/
+/* ==========================================================================
+                                    HEADER
+   ==========================================================================
+ */
 
 .header {
   display: flex;
@@ -283,7 +286,7 @@ h1 {
   font-family: serif;
   font-style: italic;
   margin: -5px 0 0 0; /*margine negativo per avvicinarlo al logo*/
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .icone {
@@ -294,29 +297,29 @@ h1 {
 }
 
 /*pulsante subscribe*/
-.subscribe {
+.aenean {
   font-family: "Times New Roman", serif;
   font-weight: bold;
   background-color: #222;
   color: #ffffff;
-  padding: 4px 8px;
+  padding: 2px 8px;
   border: none;
   cursor: pointer;
   border-radius: 4px;
 }
 
-.subscribe:hover {
+.aenean:hover {
   background-color: #c00;
 }
 
-/*"pulsante" sign in*/
-#SignIn a {
+/*"pulsante"  magna ligula*/
+#magna a {
   font-family: "Times New Roman", serif;
   color: #000000;
   cursor: pointer;
 }
 
-#SignIn a:hover {
+#magna a:hover {
   color: #c00;
 }
 
@@ -334,4 +337,345 @@ a {
   color: inherit;
 }
 
-/* END HEADER */
+/* ==========================================================================
+                              MENU A TENDINA
+   ==========================================================================
+ */
+
+.menu { /*barra divisoria*/
+  --divisore-height: 36px;
+  width: 100%;
+  height: var(--divisore-height);
+  min-height: var(--divisore-height);
+  background-color: #a61022;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  white-space: nowrap;
+}
+
+.menu-tendina {
+  position: relative; /*posiziono il contenuto rispetto al titolo*/
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*applico casella a tutti i menu a tendina per comodità
+ed evitare di scrivere lo stesso codice 8 volte*/
+.casella {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%; /*ha una leggera spaziatura, proprio come nel sito originale*/
+  padding-top: 5px;
+  min-width: 130px;
+  background-color: #ffffff;
+  z-index: 1000;
+  left: 0;
+}
+
+/*stile dei link dentro il menu*/
+.dropdown-content a {
+  color: #000000;
+  padding: 3px 5px;
+  text-decoration: none;
+  display: block;    /* Uno sotto l'altro */
+  font-family: "Times New Roman", sans-serif;
+  font-size: 14px;
+}
+
+/*effetto hover sui singoli link*/
+.dropdown-content a:hover {
+  background-color: #a61022;
+  color: #ffffff;
+}
+
+.menu-tendina:hover .dropdown-content {
+  display: block;
+}
+/* ==========================================================================
+                              GRIGLIA A 3 COLONNE
+   ==========================================================================
+ */
+
+.griglia {
+  display: grid;
+  /*colonna 1: 25%, Colonna 2: 50%, Colonna 3: 25%*/
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: serif;
+}
+
+#extra { /*solo spaziatura*/
+  margin-top: 45px;
+}
+
+/*stile delle mini-notizie a sinistra*/
+.mini-news {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 3px;
+  align-items: center;
+}
+
+.mini-news img {
+  width: 90px; /*dimensione fissa*/
+  height: 80px;
+}
+
+.mini-news h3 {
+  font-size: 14px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/*stile per la notizia principale centrale*/
+.news-principali h1 {
+  font-size: 35px;
+  font-family: "Times New Roman", Serif;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+
+}
+
+.news-principali p{
+  font-size: 15px;
+  font-family: "Times New Roman", Serif;
+  color: #767676;
+}
+
+.autore{
+  color: teal;
+}
+
+sub{
+    font-size: 13px;
+    vertical-align: 2px;
+  color: #c00;
+  }
+
+#paragrafo {
+  font-family: "Times New Roman", Serif;
+  font-size: 19px;
+  text-align: justify;
+  color: #444444;
+}
+
+.mini {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: flex-start; /*allineo il testo all'inizio dell'immagine*/
+}
+
+/*fforza il contenuto a stare uno sopra l'altro*/
+.testo-notizia {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mini img {
+  width: 130px;
+  height: 110px;
+  object-fit: cover; /*evito che l'immagine si deformi*/
+}
+
+.mini h3 {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  text-align: justify;
+}
+
+.mini p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.popular{ /*come #extra{} è solo per spaziare*/
+  margin-top: 160px;
+}
+
+.popular-divisore {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 3px;
+  align-items: center;
+
+  height: 30px;
+  width: 100%;
+  color: #ffffff;
+  background-image: linear-gradient(to right,#999999, #aaaaaa, #ffffff);
+}
+
+.popular h3{
+  font-size: 18px;
+  line-height: 1.1;
+  text-weight: bold;
+  margin: 0;
+  margin-left: 7px;
+}
+
+.popular p{
+  font-size: 16.5px;
+  font-weight: bold;
+  font-family: "Times New Roman", Serif;
+  color: #000000;
+  margin: 0;
+  height: auto;
+  margin-top:16px;
+}
+
+.foto {
+  width: 100%;
+  height: auto;
+}
+
+/*search-bar*/
+.barra-cerca {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search {
+  width: 100%;
+  padding: 5px 40px 5px 15px; /*aumento il padding a destra (40px) per non scrivere sopra l'icona*/
+  border: 1px solid #ccc;
+  border-radius: 20px; /*effetto stondato*/
+  font-family: "Times New Roman", Serif;
+  outline: none;
+}
+
+/*icona della lente di ingrandimento*/
+.icona {
+  position: absolute;
+  right: 15px;      /*distanza dal bordo destro*/
+  top: 50%;         /*centro verticalmente*/
+  transform: translateY(-50%); /*correzione precisa del centro*/
+  fill: #666;       /*colore scelto dell'icona*/
+  pointer-events: none; /*il click passa attraverso l'icona e attiva l'input*/
+}
+
+/*effetto quando clicchi sulla barra: diventa rossa come il divisore dei menu a tendina*/
+.search:focus {
+  border-color: #a61022;
+}
+
+.ipsum-quia {
+  color: #000000;
+  font-family: "Times New Roman", Serif;
+  font-size: 17px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2%;
+  position: relative;
+  gap: 5px;
+}
+
+.pics {
+  display: flex;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.pics:hover {
+  filter: grayscale(0%);
+  opacity: initial;
+}
+
+.foto-laterale h3 {
+  color: #000000;
+  font-family: "Times New Roman", Serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2%;
+  position: relative;
+}
+
+.player {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.paper-section {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 3px;
+  gap: 8px; /*controllo distanza orizzontale tra foto e testo*/
+  margin-top: 25px;
+}
+
+.paper-testo {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+
+/*rimuovo i margini che creano troppo spazio*/
+.paper-testo h3,
+.paper-testo p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.1; /*interlinea (string spazio tra le righe)*/
+}
+
+.paper-testo h3 {
+  font-family: "Times New Roman", Serif;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px; /*distanza minima tra titolo e paragrafo*/
+}
+
+.paper-testo p {
+  font-family: "Times New Roman", Serif;
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.paper-img {
+  /*definisco larghezza fissa per bloccare il testo*/
+  width: 130px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* ==========================================================================
+                              PIE' DI PAGINA
+   ==========================================================================
+ */
